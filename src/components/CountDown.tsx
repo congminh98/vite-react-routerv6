@@ -15,7 +15,7 @@ function CountDown({ }: Props) {
     <>
       <section className="relative place-items-center h-screen section-countdown overflow-hidden md:bg-invitation md:bg-cover md:bg-center">
         <div className="flex justify-center w-full before:absolute before:content-[''] before:w-full before:h-full before:left-0 before:top-0 before:bg-before before:z-10 after:absolute after:content-[''] after:bottom-0 after:left-0 after:h-0 after:border-t-[100px] after:border-r-[50vw] after:border-b-0 after:border-l-[50vw] after:border-after after:z-30">
-          <video poster={IMAGES.VIDEO_POSTER} autoPlay loop playsInline preload="none" className="md:hidden w-full h-auto absolute bg-cover">
+          <video poster={IMAGES.VIDEO_POSTER} autoPlay loop playsInline preload="true" className="md:hidden w-full h-auto absolute bg-cover">
             <source src={IMAGES.VIDEO} type="video/webm" />
             <source src={IMAGES.VIDEO} type="video/mp4" />
           </video>
