@@ -12,6 +12,7 @@
   html,
   body {
     font-family: 'Noto Sans Display', sans-serif;
+    background-color: transparent;
   }
 }
 
