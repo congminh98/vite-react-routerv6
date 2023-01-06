@@ -1,7 +1,7 @@
 import IMAGES from "@/constants/Images"
 import React from 'react'
 
-type Props = {}
+interface Props {}
 
 export default function Introduction({ }: Props) {
   return (
@@ -12,7 +12,10 @@ export default function Introduction({ }: Props) {
             <img src={IMAGES?.VIDEO_POSTER} alt="" />
           </div>
           <div className="user-info">
-            <div className="flow-icon"></div>
+
+            <div className="flow-icon">
+              <img src="" alt="" />
+            </div>
           </div>
         </div>
       </section>
