@@ -10,9 +10,7 @@ interface Props {
 export default function HomePage({ teams }: Props) {
   return (
     <>
-      <div className="relative page-home">
-        <CountDown />
-      </div>
+      <CountDown />
     </>
   )
 }

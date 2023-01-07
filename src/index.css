@@ -19,10 +19,12 @@
 @layer components {}
 
 @layer utilities {
-  .after-css::after {
-    border-color: transparent transparent #fff;
-    border-style: solid;
-    border-width: 0 0 100px 100vw;
+  .container {
+    --container: 1180px;
+    --pd-container: 10px;
+    max-width: var(--container);
+    padding-left: var(--pd-container);
+    padding-right: var(--pd-container);
   }
 }
 

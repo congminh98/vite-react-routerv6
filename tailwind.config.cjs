@@ -7,16 +7,28 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      screens: {}
+      screens: {},
+      container: {
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem'
+        }
+      }
     },
     fontFamily: {
       vibes: 'Great Vibes, cursive',
-      rubik: 'Rubik Bubbles, cursive'
+      rubik: 'Rubik Bubbles, cursive',
+      rowdies: 'Rowdies, cursive'
     },
     extend: {
       colors: {
-        before: 'rgba(47, 54, 64, .5)',
-        after: 'transparent #fff transparent #fff'
+        before: 'rgba(47, 54, 64, .6)',
+        beforemd: 'rgba(47, 54, 64, .85)',
+        after: 'transparent rgb(253 224 71) transparent rgb(253 224 71)',
+        'text-user': '#73777b'
       },
       borderWidth: theme => ({
         'w-100': '100px',
