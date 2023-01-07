@@ -1,3 +1,4 @@
+import { AUDIOS, VIDEOS } from "@/constants";
 import IMAGES from "@/constants/Images";
 import useCountDown from "@/hooks/useCountDown";
 import React from 'react';
@@ -15,13 +16,17 @@ function CountDown({ }: Props) {
     <>
       <section className="relative h-screen overflow-hidden bg-cover mb-14 place-items-center section-countdown md:bg-invitation md:bg-center">
         <div className="flex justify-center w-full before:absolute before:content-[''] before:w-full before:h-full before:left-0 before:top-0 before:bg-before before:z-10 after:absolute after:content-[''] after:bottom-0 after:left-0 after:h-0 after:border-t-[100px] after:border-r-[50vw] after:border-b-0 after:border-l-[50vw] after:border-after after:z-30 before:transition after:opacity-80 md:before:bg-beforemd md:after:border-t-[50px]">
-          <video poster={IMAGES.VIDEO_POSTER} autoPlay loop playsInline preload="true" className="absolute top-0 left-0 object-cover object-center h-auto min-w-full bg-cover md:hidden" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"  data-aos-delay="300" data-aos-offset="0">
-            <source src={IMAGES.VIDEO2} type="video/mp4" />
+          <video poster={IMAGES.THUMBNAIL} autoPlay loop playsInline preload="true" className="absolute top-0 left-0 object-cover object-center h-auto min-w-full bg-cover md:hidden" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+            {/* <source src={VIDEOS.VIDEO} type="video/mp4" />
+            <source src={VIDEOS.VIDEO} type="video/mp4" /> */}
           </video>
+          <audio autoPlay className="hidden">
+            <source src={AUDIOS.AUDIO} type="audio/webm" />
+          </audio>
         </div>
         <div className="relative z-20 grid items-center content-center h-full countdown-content justify-items-center">
           <div className="flex flex-col items-center justify-center w-full">
-            <img className="w-2/12 md:w-2/6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" src={IMAGES.WHITE_ARROW}alt="" />
+            <img className="w-2/12 md:w-2/6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" src={IMAGES.WHITE_ARROW} alt="" />
             <h1 className="flex items-center gap-10 py-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-600 text-8xl font-rubik md:font-vibes md:font-extrabold animate-text lg:flex-col lg:gap-2 md:text-6xl md:py-9" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500">
               Công Minh<span className="text-5xl md:text-2xl md:leading-none">&</span>Thanh Huyền
             </h1>
