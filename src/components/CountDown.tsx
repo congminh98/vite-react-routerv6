@@ -28,23 +28,23 @@ function CountDown({ }: Props) {
             </h1>
             <img className="w-2/12 md:w-1/4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" src={IMAGES.WHITE_ARROW_REVERSE} alt="" />
           </div>
-          <p className="my-10 text-2xl italic text-amber-200 md:text-xl md:my-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1100" data-aos-anchor-placement="top-bottom">
+          <p className="my-10 text-2xl italic text-amber-200 md:text-xl md:my-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200" data-aos-anchor-placement="top-bottom">
             Sẽ đón giao thừa sau
           </p>
-          <div className="relative flex" data-aos-duration="1000" data-aos-delay="1000">
-            <span className={spanStyles.span} data-aos="flip-up" data-aos-delay="1000" data-aos-duration="500">
+          <div className="relative flex" data-aos="flip-up" data-aos-duration="500" data-aos-delay="2000">
+            <span className={spanStyles.span}>
               <p className={spanStyles.p}>{countDownTime?.days}</p>
               <p className={spanStyles.p2}>Ngày</p>
             </span>
-            <span className={spanStyles.span} data-aos="flip-up" data-aos-delay="1000" data-aos-duration="500">
+            <span className={spanStyles.span}>
               <p className={spanStyles.p}>{countDownTime?.hours}</p>
               <p className={spanStyles.p2}>Giờ</p>
             </span>
-            <span className={spanStyles.span} data-aos="flip-up" data-aos-delay="1000" data-aos-duration="500">
+            <span className={spanStyles.span}>
               <p className={spanStyles.p}>{countDownTime?.minutes}</p>
               <p className={spanStyles.p2}>Phút</p>
             </span>
-            <span className={`${spanStyles.span} !border-0`} data-aos="flip-up" data-aos-delay="1000" data-aos-duration="500">
+            <span className={`${spanStyles.span} !border-0`}>
               <p className={spanStyles.p}>{countDownTime?.seconds}</p>
               <p className={spanStyles.p2}>Giây</p>
             </span>
