@@ -15,14 +15,12 @@ function CountDown({ }: Props) {
   return (
     <>
       <section className="relative h-screen overflow-hidden bg-cover mb-14 place-items-center section-countdown md:bg-invitation md:bg-center">
-        <div className="flex justify-center w-full before:absolute before:content-[''] before:w-full before:h-full before:left-0 before:top-0 before:bg-before before:z-10 after:absolute after:content-[''] after:bottom-0 after:left-0 after:h-0 after:border-t-[100px] after:border-r-[50vw] after:border-b-0 after:border-l-[50vw] after:border-after after:z-30 before:transition after:opacity-80 md:before:bg-beforemd md:after:border-t-[50px]">
-          <video poster={IMAGES.THUMBNAIL} autoPlay loop playsInline preload="true" className="absolute top-0 left-0 object-cover object-center h-auto min-w-full bg-cover md:hidden" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+        <div className="flex justify-center w-full before:absolute before:content-[''] before:w-full before:h-full before:left-0 before:top-0 before:bg-before before:z-10 after:absolute after:hidden after:content-[''] after:bottom-0 after:left-0 after:h-0 after:border-t-[100px] after:border-r-[50vw] after:border-b-0 after:border-l-[50vw] after:border-after after:z-30 before:transition after:opacity-80 md:before:bg-beforemd md:after:border-t-[50px]">
+          <video poster={IMAGES.THUMBNAIL} loop playsInline preload="none" className="absolute top-0 left-0 object-cover object-center h-auto min-w-full bg-cover md:hidden" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
             {/* <source src={VIDEOS.VIDEO} type="video/mp4" />
             <source src={VIDEOS.VIDEO} type="video/mp4" /> */}
           </video>
-          <audio autoPlay className="hidden">
-            <source src={AUDIOS.AUDIO} type="audio/webm" />
-          </audio>
+          <audio src={AUDIOS?.AUDIO} autoPlay controls={false}></audio>
         </div>
         <div className="relative z-20 grid items-center content-center h-full countdown-content justify-items-center">
           <div className="flex flex-col items-center justify-center w-full">
