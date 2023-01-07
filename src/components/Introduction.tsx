@@ -10,7 +10,7 @@ export default function Introduction({ }: Props) {
         <div className="container">
           <div className="relative flex flex-row">
             <div className="user-image h-[452.8px] min-w-[452.8px] max-w-[452.8px]">
-              <img src={IMAGES?.VIDEO_POSTER} className="object-cover h-full" alt="" />
+              <img src={IMAGES?.THUMBNAIL} className="object-cover h-full" alt="" />
             </div>
             <div className="relative flex items-end">
               <div className="relative -mx-[10%] -my-[5%] max-w-full p-12 shadow-xl before:absolute before:top-0 before:left-0 before:h-full before:w-full before:border before:border-orange-400 border-[30px] rounded-2xl border-transparent z-[1]">
