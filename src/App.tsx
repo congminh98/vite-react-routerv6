@@ -1,6 +1,8 @@
+import { lazy } from "react";
 import { useLoaderData } from "react-router-dom";
-import HomePage from "@/pages/HomePage";
-import Introduction from "@/components/Introduction";
+// Lazy load components
+const HomePage = lazy(() => import('@/pages/HomePage'));
+const Introduction = lazy(() => import('@/components/Introduction'));
 
 function App() {
   const teams = useLoaderData();

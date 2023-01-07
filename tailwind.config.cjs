@@ -30,7 +30,8 @@ module.exports = {
         lg: { max: '1366px' }
       }),
       backgroundImage: {
-        invitation: "url('assets/images/invitation.jpeg')"
+        invitation: "url('assets/images/invitation.jpeg')",
+        loading: "url('/loading.gif')"
       },
       animation: {
         text: 'text 5s ease infinite'
