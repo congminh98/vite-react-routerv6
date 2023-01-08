@@ -21,14 +21,15 @@ module.exports = {
     fontFamily: {
       vibes: 'Great Vibes, cursive',
       rubik: 'Rubik Bubbles, cursive',
-      rowdies: 'Rowdies, cursive'
+      rowdies: 'Rowdies, cursive',
+      nunito: 'Nunito, sans-serif'
     },
     extend: {
       colors: {
         before: 'rgba(47, 54, 64, .6)',
         beforemd: 'rgba(47, 54, 64, .85)',
         after: 'transparent rgb(253 224 71) transparent rgb(253 224 71)',
-        'text-user': '#73777b'
+        color2: '#487eb0'
       },
       borderWidth: theme => ({
         'w-100': '100px',
