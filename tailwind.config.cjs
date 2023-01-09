@@ -43,7 +43,7 @@ module.exports = {
         lg: { max: '1366px' }
       }),
       backgroundImage: {
-        invitation: "url('assets/images/invitation.jpeg')",
+        invitation: "url('assets/images/anhcuoi.jpeg')",
         loading: "url('/loading.gif')"
       },
       animation: {
@@ -65,6 +65,8 @@ module.exports = {
   },
   plugins: [],
   safelist: [
-    { pattern: /(bg|text|border|from|to)-./ }
+    {
+      pattern: /(bg|text|border|from|to|rotate|scale|m(t|r|b|l))-./
+    }
   ]
 };

@@ -4,6 +4,7 @@ import FLOWER from "@/assets/images/flower.svg";
 import THUMBNAIL from "@/assets/images/anhcuoi.jpeg";
 import FB_SVG from "@/assets/images/facebook.svg";
 import INSTAGRAM_SVG from "@/assets/images/instagram.svg";
+import BRIDE from "@/assets/images/codau.jpeg";
 
 const IMAGES = {
   WHITE_ARROW: WHITE_ARROW,
@@ -12,6 +13,7 @@ const IMAGES = {
   THUMBNAIL: THUMBNAIL,
   FB_SVG: FB_SVG,
   INSTAGRAM_SVG: INSTAGRAM_SVG,
+  BRIDE: BRIDE,
 };
 
 export default IMAGES;

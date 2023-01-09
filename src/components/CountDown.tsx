@@ -1,4 +1,4 @@
-import { AUDIOS, VIDEOS } from "@/constants";
+import { AUDIOS } from "@/constants";
 import IMAGES from "@/constants/Images";
 import useCountDown from "@/hooks/useCountDown";
 import React from 'react';
@@ -14,7 +14,7 @@ function CountDown({ }: Props) {
   const countDownTime = useCountDown();
   return (
     <>
-      <section className="relative h-screen overflow-hidden bg-cover mb-14 place-items-center section-countdown md:bg-invitation md:bg-center">
+      <section className="relative h-screen overflow-hidden bg-cover mb-14 md:mb-0 place-items-center section-countdown md:bg-invitation md:bg-center">
         <div className="flex justify-center w-full before:absolute before:w-full before:h-full before:left-0 before:top-0 before:bg-before before:z-10 after:absolute after:bottom-0 after:left-0 after:h-0 after:border-t-[100px] after:border-r-[50vw] after:border-b-0 after:border-l-[50vw] after:border-after after:z-30 before:transition after:opacity-80 md:before:bg-beforemd md:after:border-t-[50px]">
           <video poster={IMAGES.THUMBNAIL} loop playsInline preload="none" className="absolute top-0 left-0 object-cover object-center h-auto min-w-full bg-cover md:hidden" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
             {/* <source src={VIDEOS.VIDEO} type="video/mp4" />

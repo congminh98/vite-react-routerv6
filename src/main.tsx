@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 import router from "./routes"
 import AOS from 'aos';
 AOS.init({
-  // disable: 'mobile',
+  disable: 'mobile',
   once: false,
   mirror: false
 });
