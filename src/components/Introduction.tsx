@@ -1,7 +1,7 @@
 import IMAGES from "@/constants/Images"
 import Social from "@/shared/Social"
 import UserInfo from "@/shared/UserInfo"
-import React from 'react'
+import React, { memo } from 'react'
 
 interface Props { }
 
@@ -30,7 +30,7 @@ const WifeInfo = {
   mbm: "md:mb-0"
 }
 
-export default function Introduction({ }: Props) {
+function Introduction({ }: Props) {
   return (
     <>
       <section className="py-20 md:py-10 section-introduction">
@@ -42,3 +42,4 @@ export default function Introduction({ }: Props) {
     </>
   )
 }
+export default memo(Introduction);

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useCountDown = () => {
   const [timeCountDown, setTimeCountDown] = useState<any>({
@@ -7,7 +7,7 @@ const useCountDown = () => {
     minutes: 0,
     seconds: 0
   });
-  useMemo(() => {
+  useEffect(() => {
     // Set the date we're counting down to
     const countDownDate = new Date("Jan 22, 2023 00:00:00").getTime();
     // Update the count down every 1 second

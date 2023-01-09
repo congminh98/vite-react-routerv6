@@ -22,29 +22,33 @@ module.exports = {
       vibes: 'Great Vibes, cursive',
       rubik: 'Rubik Bubbles, cursive',
       rowdies: 'Rowdies, cursive',
-      nunito: 'Nunito, sans-serif'
+      nunito: 'Nunito, sans-serif',
+      playBall: 'Playball, cursive',
+      quickSand: 'Quicksand, sans-serif',
+      SVNEvitrian: 'SVNEvitrian, cursive'
     },
     extend: {
       colors: {
-        before: 'rgba(47, 54, 64, .6)',
+        before: 'rgba(47, 54, 64, .8)',
+        before2: '#fff transparent transparent',
         beforemd: 'rgba(47, 54, 64, .85)',
         after: 'transparent rgb(253 224 71) transparent rgb(253 224 71)',
-        color2: '#487eb0'
+        after2: 'transparent transparent #fff',
+        after3: 'transparent transparent transparent #fff',
+        color2: '#487eb0',
+        colorPink: '#ff4061'
       },
-      borderWidth: theme => ({
-        'w-100': '100px',
-        'w-50vw': '50vw'
-      }),
-      minWidth: theme => ({
-        '3/2': '150px'
-      }),
       screens: theme => ({
         md: { max: '767px' },
         lg: { max: '1366px' }
       }),
       backgroundImage: {
         invitation: "url('assets/images/anhcuoi.jpeg')",
-        loading: "url('/loading.gif')"
+        loading: "url('/loading.gif')",
+        flower: "url('assets/images/invitation.jpeg')",
+        leaf: "url('assets/images/leaf.svg')",
+        whiteArrow: "url('assets/images/white-arrow.svg')",
+        whiteArrowReverse: "url('assets/images/white-arrow-reverse.svg')"
       },
       animation: {
         text: 'text 5s ease infinite'

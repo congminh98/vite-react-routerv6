@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;0,900;0,1000;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,30 +5,50 @@
 @layer base {
   @font-face {
     font-family: 'Rubik Bubbles';
-    font-weight: 400;
     src: url(../src/assets/fonts/RubikBubbles-Regular.woff) format("woff");
+    font-weight: 400;
   }
 
   @font-face {
-    font-family: 'Source Sans Pro';
-    font-weight: 800;
-    src: url(../src/assets/fonts/SourceSansPro-SemiBold.woff) format("woff");
+    font-family: 'Quicksand';
+    src: url(../src/assets/fonts/Quicksand-Regular.woff) format("woff");
+    font-weight: 400;
   }
 
   @font-face {
-    font-family: 'Source Sans Pro';
-    font-weight: 900;
-    src: url(../src/assets/fonts/SourceSansPro-Black.woff) format("woff");
+    font-family: 'SVNEvitrian';
+    src: url(../src/assets/fonts/SVN-Evitrian-Regular.woff) format("woff");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Playball';
+    src: url(../src/assets/fonts/Playball-Regular.woff) format("woff");
+    font-weight: 400;
   }
 
   html,
   body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     background-color: transparent;
+    color: #fff;
   }
 }
 
-@layer components {}
+@layer components {
+  .before-style{
+    @apply before:absolute before:top-0 before:left-0 before:border-t-[100px] before:border-r-[100vw] before:border-b-0 before:border-l-0 before:border-before2 md:before:border-t-[50px]
+  }
+  .after-style{
+    @apply after:absolute after:bottom-0 after:left-0 after:border-t-0 after:border-r-0 after:border-b-[100px] after:border-l-[100vw] after:border-after2
+  }
+  .after2-style{
+    @apply after:absolute after:bottom-0 after:left-0 after:border-t-[100px] after:border-r-0 after:border-b-0 after:border-l-[100vw] after:border-after3 md:after:border-t-[50px]
+  }
+  .after-before-style {
+    @apply before:absolute before:top-0 before:left-0 before:border-t-[100px] before:border-r-[0] before:border-b-0 before:border-l-[100vw] before:border-before2 after:absolute after:bottom-0 after:left-0 after:border-t-[100px] after:border-b-0 after:border-r-[100vw] after:border-after2;
+  }
+}
 
 @layer utilities {
   .container {
@@ -38,6 +57,14 @@
     max-width: var(--container);
     padding-left: var(--pd-container);
     padding-right: var(--pd-container);
+  }
+  .text-shadow-default{
+    --color-shadow: rgb(245 158 11);
+    text-shadow: -2px 3px var(--color-shadow);
+  }
+  .text-stroke-default{
+    --color-stroke: #ff4061;
+    -webkit-text-stroke: 0.5px var(--color-stroke);
   }
 }
 
