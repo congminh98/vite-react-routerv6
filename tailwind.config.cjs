@@ -40,7 +40,7 @@ module.exports = {
       },
       screens: theme => ({
         md: { max: '767px' },
-        lg: { max: '1366px' }
+        lg: { min: '1366px' }
       }),
       backgroundImage: {
         invitation: "url('assets/images/anhcuoi.jpeg')",

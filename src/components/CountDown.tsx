@@ -20,12 +20,12 @@ function CountDown({ }: Props) {
             {/* <source src={VIDEOS.VIDEO} type="video/mp4" />
             <source src={VIDEOS.VIDEO} type="video/mp4" /> */}
           </video>
-          <audio src={AUDIOS?.AUDIO} autoPlay controls={false}></audio>
+          <audio src={AUDIOS?.AUDIO} controls={false}></audio>
         </div>
         <div className="relative z-20 grid items-center content-center h-full countdown-content justify-items-center">
           <div className="flex flex-col items-center justify-center w-full">
             {/* <img className="w-2/12 md:w-2/6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" src={IMAGES.WHITE_ARROW} alt="" /> */}
-            <h1 className="flex items-center gap-10 py-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-600 text-8xl font-rubik md:font-vibes md:font-extrabold animate-text lg:flex-col lg:gap-2 md:text-6xl md:py-9" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500">
+            <h1 className="flex items-center gap-10 py-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-600 text-8xl font-rubik md:font-playBall md:font-extrabold animate-text md:flex-col md:gap-2 md:text-6xl md:py-5" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500">
               Công Minh<span className="text-5xl md:text-2xl md:leading-none">&</span>Thanh Huyền
             </h1>
             <img className="w-auto" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" src={IMAGES.DIVIDER} alt="" />

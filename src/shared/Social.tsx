@@ -1,7 +1,7 @@
 import React from 'react'
 
 type Props = {}
-const styleLi = 'p-1.5 text-xs text-white rounded-sm bg-color2';
+const styleLi = 'p-1.5 text-xs text-white rounded-sm bg-colorPink';
 
 export default function Social({ }: Props) {
   return (
