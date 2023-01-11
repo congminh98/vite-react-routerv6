@@ -7,7 +7,7 @@ interface Props { }
 function Invitation({ }: Props) {
   return (
     <>
-      <section className="relative z-[1] py-32 bg-center bg-no-repeat bg-flower lg:bg-fixed md:bg-cover before:absolute before:top-0 before:left-0 before:bg-before before:h-full before:w-full before:-z-[1] before-style after-style md:pt-24 md:pb-32">
+      <section className="relative z-[1] py-32 mb-12 bg-center bg-no-repeat bg-flower lg:bg-fixed md:bg-cover before:absolute before:top-0 before:left-0 before:bg-before before:h-full before:w-full before:-z-[1] before-style after-style md:pt-24 md:pb-32">
         <div className="container">
           <div className="grid gap-4 mb-20 justify-items-center md:mb-10">
             <h2 className="text-5xl text-white text-shadow-default text-stroke-default md:text-4xl">Invitation</h2>
@@ -24,7 +24,6 @@ function Invitation({ }: Props) {
                   </h2>
                 </div>
               </div>
-              {/* before:left-full before:right-0 before:-translate-x-[40%] before:-translate-y-[40%] || after:right-full after:top-full after:translate-x-[40%] after:-translate-y-[40%]*/}
               <div className="grid flex-1 h-full px-7 py-5 md:px-2 justify-items-center bg-[rgba(72,126,176,.6)]">
                 <div className="w-1/2 mb-7 md:mb-5">
                   <img src={IMAGES?.WEDDING_LOGO} alt="" />

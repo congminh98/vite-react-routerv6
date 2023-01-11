@@ -4,7 +4,7 @@
 
 @layer base {
   @font-face {
-    font-family: 'Rubik Bubbles';
+    font-family: 'Rubik';
     src: url(../src/assets/fonts/RubikBubbles-Regular.woff) format("woff");
     font-weight: 400;
   }
@@ -13,6 +13,12 @@
     font-family: 'Quicksand';
     src: url(../src/assets/fonts/Quicksand-Regular.woff) format("woff");
     font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Quicksand';
+    src: url(../src/assets/fonts/Quicksand-Bold.woff) format("woff");
+    font-weight: 700;
   }
 
   @font-face {
@@ -47,6 +53,9 @@
   }
   .after-before-style {
     @apply before:absolute before:top-0 before:left-0 before:border-t-[100px] before:border-r-[0] before:border-b-0 before:border-l-[100vw] before:border-before2 after:absolute after:bottom-0 after:left-0 after:border-t-[100px] after:border-b-0 after:border-r-[100vw] after:border-after2;
+  }
+  .input-style {
+    @apply h-[45px] p-3 text-colorPink
   }
 }
 

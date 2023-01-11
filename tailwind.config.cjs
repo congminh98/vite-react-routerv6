@@ -20,7 +20,7 @@ module.exports = {
     },
     fontFamily: {
       vibes: 'Great Vibes, cursive',
-      rubik: 'Rubik Bubbles, cursive',
+      rubik: 'Rubik, cursive',
       rowdies: 'Rowdies, cursive',
       nunito: 'Nunito, sans-serif',
       playBall: 'Playball, cursive',
@@ -36,7 +36,11 @@ module.exports = {
         after2: 'transparent transparent #fff',
         after3: 'transparent transparent transparent #fff',
         color2: '#487eb0',
-        colorPink: '#ff4061'
+        colorPink: '#ff4061',
+        bg2: 'rgba(255,255, 255,0.7)'
+      },
+      boxShadow: {
+        button: '0 0 0 2px #fff inset, 0 0 0 2px #ff4061'
       },
       screens: theme => ({
         md: { max: '767px' },

@@ -9,7 +9,6 @@ interface Props {
 
 function UserInfo(props: any) {
   const { rowReverse, userImage, userName, husband, des, scale, rotate, flowerPos, itemPos, mb, mbm } = props;
-  console.log(props);
 
   return (
     <>
