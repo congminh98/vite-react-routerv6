@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 export async function getGuestBook(){
   try {
     const guestBook = await axiosClient.get(
-      "/guest-books?sort[createdAt]=DESC"
+      "/guest-books?sort[id]=DESC"
     );
     return guestBook?.data || [];
   } catch (error) {
