@@ -3,7 +3,7 @@ import { getTeams } from "@/api/team";
 import { QueryClient } from "@tanstack/react-query";
 import { json } from "react-router-dom";
 
-export const loader = (queryClient: { getQueryData: (arg0: string[]) => any; fetchQuery: (arg0: { queryKey: string[]; queryFn: () => Promise<any>; staleTime: number; }) => any; }) => async () => {
+export const loader = (queryClient: any) => async () => {
   const query = useGuestBook();
   return (
     queryClient.getQueryData(query.queryKey) ??
