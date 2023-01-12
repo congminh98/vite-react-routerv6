@@ -8,7 +8,7 @@ const location = "!1m18!1m12!1m3!1d3833.7039529098856!2d108.23413482658732!3d16.
 function Location({ }: Props) {
   return (
     <>
-      <section className="mb-20">
+      <section className="mb-20 relative z-[1]">
         <div className="grid gap-4 mb-12 justify-items-center md:mb-10">
           <h2 className="text-5xl text-white text-shadow-default text-stroke-default md:text-4xl">Invitation</h2>
           <SvgUnderline color="text-[#ff4061]" />

@@ -45,14 +45,14 @@ export default function GuestBook({ }: Props) {
           <div className="grid mb-10 justify-items-center">
             <h2 className="mb-5 text-5xl text-colorPink font-playBall">Sổ Lưu Bút</h2>
             <img className="mb-5" src={IMAGES?.DIVIDER} alt="" />
-            <p className="text-lg">Tôi yêu bạn vì tất cả những gì bạn đang có, tất cả những gì bạn đã có, và tất cả những gì bạn chưa hiện hữu.</p>
+            <p className="text-lg text-center md:hidden">Tôi yêu bạn vì tất cả những gì bạn đang có, tất cả những gì bạn đã có, và tất cả những gì bạn chưa hiện hữu.</p>
           </div>
           <div className="flex gap-5 md:flex-col">
             <div className="flex-1">
-              <p className="mb-6">Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!</p>
+              <p className="mb-6 text-center">Cảm ơn bạn rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của chúng tôi!</p>
               <form onSubmit={handleSubmit}>
-                <div className="grid gap-5">
-                  <fieldset className="flex gap-5">
+                <div className="grid gap-5 md:gap-2">
+                  <fieldset className="flex gap-5 md:flex-col md:gap-2">
                     <input
                       className="flex-1 input-style"
                       type="text" value={dataGuestbook?.name}

@@ -38,6 +38,7 @@
     font-family: 'Quicksand', sans-serif;
     background-color: transparent;
     color: #fff;
+    scroll-behavior: smooth;
   }
 }
 
