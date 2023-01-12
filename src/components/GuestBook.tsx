@@ -17,7 +17,6 @@ export default function GuestBook({ }: Props) {
   const [dataGuestbook, setDataGuestbook] = useState<any>(initialState);
   const queryClient = useQueryClient();
   const { data: guestBooks, isLoading: getLoading } = useQuery(useGuestBook());
-  console.log(guestBooks);
 
   const { mutate, isLoading: postLoading } = useMutation(postGuestBook, {
     onSuccess: data => {
@@ -41,8 +40,6 @@ export default function GuestBook({ }: Props) {
       console.log(error);
     }
   }
-  console.log(postLoading);
-  
 
   return (
     <>
