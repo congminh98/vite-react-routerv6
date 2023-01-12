@@ -16,7 +16,8 @@ AOS.init({
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: false, // default: true
+      refetchOnWindowFocus: false,
+      staleTime: 1000 * 10,
     },
   },
 })
@@ -24,10 +25,10 @@ const Loading = lazy(() => import("@/shared/Loading"));
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Suspense fallback={<Loading />}>
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <Suspense fallback={<Loading />}>
         <RouterProvider router={router} />
-      </QueryClientProvider>
-    </Suspense>
+      </Suspense>
+    </QueryClientProvider>
   </React.StrictMode>,
 );

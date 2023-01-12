@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:1337/api",
+  // baseURL: "http://localhost:1337/api",
+  baseURL: "https://strapi-6kbz.onrender.com/api",
   headers: {
     "Content-Type": "application/json"
   }

@@ -55,7 +55,7 @@
     @apply before:absolute before:top-0 before:left-0 before:border-t-[100px] before:border-r-[0] before:border-b-0 before:border-l-[100vw] before:border-before2 after:absolute after:bottom-0 after:left-0 after:border-t-[100px] after:border-b-0 after:border-r-[100vw] after:border-after2;
   }
   .input-style {
-    @apply h-[45px] p-3 text-colorPink
+    @apply h-[45px] p-3 text-colorPink outline-0
   }
 }
 

@@ -4,16 +4,21 @@ import { loader as appLoader } from "./app";
 import Team from "@/pages/Team";
 import { loader as teamLoader, action as teamAction } from "./team";
 import ErrorPage from "@/error-page";
+import { QueryClient } from "@tanstack/react-query";
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 1000 * 10,
+    },
+  },
+})
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // loader: appLoader,
-    // action: async function ({ params, request }) {
-    //   let formData = await request.formData();
-    //   return fakeUpdateSong(params.songId, formData);
-    // }},
+    loader: appLoader,
     errorElement: <ErrorPage />
   },
   {
