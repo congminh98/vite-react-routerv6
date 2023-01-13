@@ -1,10 +1,8 @@
 import { useGuestBook } from "@/api/guestBook";
 import { postGuestBook } from "@/api/guestBook/postGuestBook";
 import IMAGES from "@/constants/Images"
-import { loader } from "@/routes/app";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import React, { useState } from 'react'
-import { useLoaderData } from "react-router-dom";
 
 type Props = {}
 const initialState = {
@@ -18,7 +16,7 @@ export default function GuestBook({ }: Props) {
   const queryClient = useQueryClient();
   const { data: guestBooks, isLoading: getLoading } = useQuery(useGuestBook());
 
-  const { mutate, mutateAsync, isLoading: postLoading } = useMutation(postGuestBook, {
+  const { mutateAsync, isLoading: postLoading } = useMutation(postGuestBook, {
     onError: () => {
       console.log("there was an error");
     },

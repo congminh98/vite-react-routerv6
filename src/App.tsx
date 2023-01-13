@@ -26,7 +26,7 @@ function App() {
           height: '100%',
           position: 'fixed',
           background: 'transparent',
-          // zIndex: 1
+          zIndex: -1
         }}
       />
     </>

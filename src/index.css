@@ -76,6 +76,20 @@
     --color-stroke: #ff4061;
     -webkit-text-stroke: 0.5px var(--color-stroke);
   }
+  .perspective-origin{
+    perspective-origin: 50% 50%;
+    perspective: 300px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+  .rotate-x-180{
+    transform: rotateX(180deg);
+  }
+  .rotate-x-0{
+    transform: rotateX(0deg);
+  }
 }
 
 body {

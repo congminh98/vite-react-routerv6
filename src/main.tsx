@@ -25,10 +25,10 @@ const Loading = lazy(() => import("@/shared/Loading"));
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />}>
+      <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
-      </Suspense>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </Suspense>
   </React.StrictMode>,
 );

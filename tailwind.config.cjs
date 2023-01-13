@@ -55,7 +55,9 @@ module.exports = {
         whiteArrowReverse: "url('assets/images/white-arrow-reverse.svg')"
       },
       animation: {
-        text: 'text 5s ease infinite'
+        text: 'text 5s ease infinite',
+        fold: 'fold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards',
+        unfold: 'unfold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards'
       },
       keyframes: {
         text: {
@@ -67,6 +69,22 @@ module.exports = {
             'background-size': '200% 200%',
             'background-position': 'right center'
           }
+        },
+        fold: {
+          '0%': {
+            transform: 'rotateX(0deg)'
+          },
+          '100%': {
+            transform: 'rotateX(-180deg)'
+          }
+        },
+        unfold: {
+          '0%': {
+            transform: 'rotateX(180deg)'
+          },
+          '100%': {
+            transform: 'rotateX(0deg)'
+          }
         }
       }
     }
@@ -74,7 +92,7 @@ module.exports = {
   plugins: [],
   safelist: [
     {
-      pattern: /(bg|text|border|from|to|rotate|scale|m(t|r|b|l))-./
+      pattern: /(bg|text|border|from|to|rotate|origin|scale|m(t|r|b|l))-./
     }
   ]
 };
