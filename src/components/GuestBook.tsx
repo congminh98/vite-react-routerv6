@@ -90,20 +90,18 @@ export default function GuestBook({ }: Props) {
             </div>
             <div className="flex-1">
               <div className={`border-4 p-2 border-colorPink h-[400px] overflow-y-auto bg-bg2 ${getLoading || postLoading ? "animate-pulse" : ""}`}>
-                <div className="h-auto">
-                  {
-                    guestBooks?.length ?
-                      guestBooks?.map((guestBook: any, i: React.Key) => {
-                        return <div key={i} className={`${Number(i) % 2 === 0 ? "" : "bg-[]"} p-2`}>
-                          <strong className="font-bold text-colorPink">{guestBook?.attributes?.name}</strong>
-                          <p className="font-normal text-slate-700">{guestBook?.attributes?.congratulation}</p>
-                        </div>
-                      })
-                      : <div className="h-full flex items-center justify-center">
-                        <p className="text-colorPink text-xl">Chưa có lời chúc ạ</p>
+                {
+                  guestBooks?.length ?
+                    guestBooks?.map((guestBook: any, i: React.Key) => {
+                      return <div key={i} className={`h-auto ${Number(i) % 2 === 0 ? "" : "bg-[]"} p-2`}>
+                        <strong className="font-bold text-colorPink">{guestBook?.attributes?.name}</strong>
+                        <p className="font-normal text-slate-700">{guestBook?.attributes?.congratulation}</p>
                       </div>
-                  }
-                </div>
+                    })
+                    : <div className="flex items-center justify-center h-full">
+                      <p className="text-xl text-colorPink">Chưa có lời chúc ạ</p>
+                    </div>
+                }
               </div>
             </div>
           </div>
