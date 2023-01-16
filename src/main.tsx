@@ -18,12 +18,13 @@ const queryClient = new QueryClient({
     queries: {
       refetchOnWindowFocus: false,
       staleTime: 1000 * 10,
+      retry: 5
     },
   },
 })
 const Loading = lazy(() => import("@/shared/Loading"));
-
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
   <React.StrictMode>
     <Suspense fallback={<Loading />}>
       <QueryClientProvider client={queryClient}>

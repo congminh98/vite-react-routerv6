@@ -35,22 +35,23 @@ module.exports = {
         after: 'transparent rgb(253 224 71) transparent rgb(253 224 71)',
         after2: 'transparent transparent #fff',
         after3: 'transparent transparent transparent #fff',
-        color2: '#487eb0',
+        colorBlue: '#487eb0',
         colorPink: '#ff4061',
         bg2: 'rgba(255,255, 255,0.7)'
       },
       boxShadow: {
         button: '0 0 0 2px #fff inset, 0 0 0 2px #ff4061'
       },
-      screens: theme => ({
+      screens: _theme => ({
         md: { max: '767px' },
         lg: { min: '1366px' }
       }),
       backgroundImage: {
-        invitation: "url('assets/images/anhcuoi.jpeg')",
+        anhcuoi: "url('assets/images/anhcuoi.jpeg')",
         loading: "url('/loading.gif')",
-        flower: "url('assets/images/invitation.jpeg')",
+        invitation: "url('assets/images/invitation.jpeg')",
         leaf: "url('assets/images/leaf.svg')",
+        flower: "url('assets/images/flower-medium.svg')",
         whiteArrow: "url('assets/images/white-arrow.svg')",
         whiteArrowReverse: "url('assets/images/white-arrow-reverse.svg')"
       },
@@ -92,7 +93,7 @@ module.exports = {
   plugins: [],
   safelist: [
     {
-      pattern: /(bg|text|border|from|to|rotate|origin|scale|m(t|r|b|l))-./
+      pattern: /(bg|text|border|from|to|rotate|origin|z|scale|m(t|r|b|l))-./
     }
   ]
 };

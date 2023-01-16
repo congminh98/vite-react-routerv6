@@ -3,7 +3,7 @@ import App from "@/App";
 import { loader as appLoader } from "./app";
 import Team from "@/pages/Team";
 import { loader as teamLoader, action as teamAction } from "./team";
-import ErrorPage from "@/error-page";
+import ErrorPage from "@/common/ErrorPage";
 
 const router = createBrowserRouter([
   {

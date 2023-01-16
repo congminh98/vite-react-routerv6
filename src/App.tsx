@@ -16,7 +16,7 @@ function App() {
           <HomePage teams={teams} />
         </div>
       </div>
-      <Fireworks
+      {/* <Fireworks
         ref={ref}
         options={FireworkOptions}
         style={{
@@ -28,7 +28,7 @@ function App() {
           background: 'transparent',
           zIndex: -1
         }}
-      />
+      /> */}
     </>
   )
 }
