@@ -1,6 +1,8 @@
 import Fireworks, { FireworksHandlers } from "@fireworks-js/react";
 import { lazy, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
+import Cursor from "@/shared/Cursor";
+import AudioPlay from "@/shared/AudioPlay";
 import { FireworkOptions } from "./utils";
 // Lazy load components
 const HomePage = lazy(() => import('@/pages/HomePage'));
@@ -15,6 +17,8 @@ function App() {
         <div className="wedding-page">
           <HomePage teams={teams} />
         </div>
+        <Cursor />
+        <AudioPlay />
       </div>
       {/* <Fireworks
         ref={ref}

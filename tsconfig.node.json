@@ -9,6 +9,7 @@
       "@/*": ["src/*"],
       "@/api/*": ["src/api/*"],
       "@/pages/*": ["src/pages/*"],
+      "@/shared/*": ["src/shared/*"],
     }
   },
   "include": ["vite.config.ts"]

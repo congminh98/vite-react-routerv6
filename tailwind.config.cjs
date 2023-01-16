@@ -37,7 +37,8 @@ module.exports = {
         after3: 'transparent transparent transparent #fff',
         colorBlue: '#487eb0',
         colorPink: '#ff4061',
-        bg2: 'rgba(255,255, 255,0.7)'
+        bg2: 'rgba(255,255, 255,0.7)',
+        orange: 'rgb(255, 146, 62)'
       },
       boxShadow: {
         button: '0 0 0 2px #fff inset, 0 0 0 2px #ff4061'

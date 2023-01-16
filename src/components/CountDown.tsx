@@ -1,4 +1,3 @@
-import { AUDIOS } from "@/constants";
 import IMAGES from "@/constants/Images";
 import useCountDown from "@/hooks/useCountDown";
 import React from 'react';
@@ -20,7 +19,6 @@ function CountDown({ }: Props) {
             {/* <source src={VIDEOS.VIDEO} type="video/mp4" />
             <source src={VIDEOS.VIDEO} type="video/mp4" /> */}
           </video>
-          <audio src={AUDIOS?.AUDIO} controls={false}></audio>
         </div>
         <div className="relative z-20 grid items-center content-center h-full countdown-content justify-items-center">
           <div className="flex flex-col items-center justify-center w-full">

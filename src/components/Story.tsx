@@ -10,7 +10,7 @@ const imgStyleCommon = "h-[546px] max-w-[546px] object-cover border-[10px] borde
 function Story({ }: Props) {
   return (
     <>
-      <section className="mb-40 md:mb-10">
+      <section className="mb-48 md:mb-10">
         <div className="relative lg:bg-fixed bg-center z-[1] bg-no-repeat bg-cover py-56 md:py-32 bg-invitation before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:bg-before before:w-full before:h-full before:-z-[1]">
           <div className="grid gap-6 justify-items-center before-style after2-style">
             <h2 className="text-5xl stroke-[2px] text-shadow-default text-stroke-default md:text-4xl">Our love story</h2>
