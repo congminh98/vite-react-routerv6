@@ -33,7 +33,7 @@ const WifeInfo = {
 function Introduction({ }: Props) {
   return (
     <>
-      <section className="py-20 md:py-10 section-introduction">
+      <section className="py-20 md:py-10 section-introduction relative z-[2] bg-white">
         <div className="container">
           <UserInfo {...HusbandInfo} />
           <UserInfo {...WifeInfo} />

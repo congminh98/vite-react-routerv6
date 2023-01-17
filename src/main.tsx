@@ -10,7 +10,8 @@ import AOS from 'aos';
 AOS.init({
   disable: 'mobile',
   once: false,
-  mirror: false
+  mirror: false,
+  throttleDelay: 99
 });
 // Create a client
 const queryClient = new QueryClient({
