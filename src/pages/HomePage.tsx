@@ -1,11 +1,12 @@
-import CountDown from "@/components/CountDown";
-import { lazy } from "react";
+import * as React from "react";
 
-const Introduction = lazy(() => import('@/components/Introduction'));
-const Story = lazy(() => import('@/components/Story'));
-const Invitation = lazy(() => import('@/components/Invitation'));
-const Location = lazy(() => import('@/components/Location'));
-const GuestBook = lazy(() => import('@/components/GuestBook'));
+const CountDown = React.lazy(() => import("@/components/CountDown"));
+const Introduction = React.lazy(() => import("@/components/Introduction"));
+const Story = React.lazy(() => import("@/components/Story"));
+const Invitation = React.lazy(() => import("@/components/Invitation"));
+const Location = React.lazy(() => import("@/components/Location"));
+const GuestBook = React.lazy(() => import("@/components/GuestBook"));
+const Music = React.lazy(() => import("@/components/music/index"));
 
 interface Props {
   teams?: {
@@ -23,6 +24,7 @@ export default function HomePage({ teams }: Props) {
       <Invitation />
       <Location />
       <GuestBook />
+      <Music />
     </>
   )
 }

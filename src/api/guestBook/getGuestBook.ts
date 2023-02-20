@@ -1,4 +1,4 @@
-import axiosClient from "@/api-client/axiosClient";
+import { axiosClient } from "@/api-client/axiosClient";
 import { useQuery } from "@tanstack/react-query";
 
 export async function getGuestBook(){
@@ -6,7 +6,7 @@ export async function getGuestBook(){
     const guestBook = await axiosClient.get(
       "/guest-books?sort[id]=DESC"
     );
-    return guestBook?.data || [];
+    return guestBook?.data ?? [];
   } catch (error) {
     console.log(error);
   }
@@ -15,7 +15,8 @@ export async function getGuestBook(){
 // export const useGuestBook = () => {
 //   return useQuery({
 //     queryKey: ["guest-books"],
-//     queryFn: () => getGuestBook()
+//     queryFn: async () => getGuestBook(),
+//     staleTime: 10000,
 //   });
 // };
 export const useGuestBook = () => ({

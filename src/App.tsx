@@ -1,26 +1,34 @@
 import Fireworks, { FireworksHandlers } from "@fireworks-js/react";
-import { lazy, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
-import Cursor from "@/shared/Cursor";
+import * as React from "react";
 import AudioPlay from "@/shared/AudioPlay";
+import HomePage from "@/pages/HomePage";
+import Loading from "@/shared/Loading";
+import Cursor from "@/shared/Cursor";
 import { FireworkOptions } from "./utils";
-// Lazy load components
-const HomePage = lazy(() => import('@/pages/HomePage'));
+import { loader } from "@/routes/app";
+import { useQuery } from "@tanstack/react-query";
+import { getAccessToken, useGetAccessToken } from "@/api/music";
+import { useCookies } from "react-cookie";
 
 function App() {
-  const teams = useLoaderData();
-  const ref = useRef<FireworksHandlers>(null);
+  const [cookies, setCookie] = useCookies(['access_token']);
+  const { access_token, expires_in } = useLoaderData() as Awaited<ReturnType<ReturnType<typeof loader>>>;
+  setCookie("access_token", access_token, { path: '/', expires: new Date(Date.now() + expires_in * 60 * 24) });
+  sessionStorage.setItem("access_token", access_token);
+  const ref = React.useRef<FireworksHandlers>(null);
 
   return (
     <>
-      <div className="App">
-        <div className="wedding-page">
-          <HomePage teams={teams} />
+      <React.Suspense fallback={<Loading />}>
+        <div className="App">
+          <div className="wedding-page">
+            <HomePage />
+          </div>
+          {/* <Cursor /> */}
+          {/* <AudioPlay /> */}
         </div>
-        <Cursor />
-        <AudioPlay />
-      </div>
-      {/* <Fireworks
+        {/* <Fireworks
         ref={ref}
         options={FireworkOptions}
         style={{
@@ -33,6 +41,7 @@ function App() {
           zIndex: -1
         }}
       /> */}
+      </React.Suspense>
     </>
   )
 }

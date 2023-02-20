@@ -8,6 +8,8 @@ import INSTAGRAM_SVG from "@/assets/images/instagram.svg";
 import BRIDE from "@/assets/images/codau.jpeg";
 import DIVIDER from "@/assets/images/divider.png";
 import WEDDING_LOGO from "@/assets/images/wedding.png";
+import FRONT from "@/assets/images/front.png";
+import FLOWER_TITLE from "@/assets/images/sec-title-flower.png";
 
 const IMAGES = {
   WHITE_ARROW: WHITE_ARROW,
@@ -20,6 +22,8 @@ const IMAGES = {
   BRIDE: BRIDE,
   DIVIDER: DIVIDER,
   WEDDING_LOGO: WEDDING_LOGO,
+  FRONT: FRONT,
+  FLOWER_TITLE: FLOWER_TITLE
 };
 
 export default IMAGES;

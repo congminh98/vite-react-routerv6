@@ -94,7 +94,7 @@ module.exports = {
   plugins: [],
   safelist: [
     {
-      pattern: /(bg|text|border|from|to|rotate|origin|z|scale|m(t|r|b|l))-./
+      pattern: /(bg|text|border|from|to|rotate|origin|z|scale|w|m(t|r|b|l))-./
     }
   ]
 };

@@ -1,7 +1,7 @@
 import IMAGES from "@/constants/Images"
 import Social from "@/shared/Social"
 import UserInfo from "@/shared/UserInfo"
-import React, { memo } from 'react'
+import * as React from 'react'
 
 interface Props { }
 
@@ -42,4 +42,4 @@ function Introduction({ }: Props) {
     </>
   )
 }
-export default memo(Introduction);
+export default React.memo(Introduction);

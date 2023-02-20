@@ -8,9 +8,39 @@ const axiosClient = axios.create({
   }
 });
 
+const axiosClientMusic = axios.create({
+  baseURL: "https://api.spotify.com/v1",
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
+
+const axiosAccountSpotify = axios.create({
+  baseURL: "https://accounts.spotify.com/api",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  }
+});
+
 // Add a request interceptor
 axiosClient.interceptors.request.use(
-  function (config) {
+  async (config) => {
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);
+
+(axiosClientMusic || axiosAccountSpotify).interceptors.request.use(
+  async (config) => {
+    const acceessToken = sessionStorage.getItem("access_token");
+    const access_token =
+      "BQAHq6mWyqEf7fa6pmCe9qsXIS60ONtNWRuDChUNsu4J5R3-nacYP5ec_yVEfVRggwptNLTp0yv2RlvjqGyAMHSC8KcpqkTFSXozNMT_y4gyrvIT34q1";
+    if (acceessToken) {
+      config.headers!.Authorization = `Bearer ${acceessToken}`;
+    }
+
     return config;
   },
   function (error) {
@@ -19,7 +49,11 @@ axiosClient.interceptors.request.use(
 );
 
 // Add a response interceptor
-axiosClient.interceptors.response.use(
+(
+  axiosClient ||
+  axiosClientMusic ||
+  axiosAccountSpotify
+).interceptors.response.use(
   function (response) {
     return response?.data;
   },
@@ -28,4 +62,4 @@ axiosClient.interceptors.response.use(
   }
 );
 
-export default axiosClient;
+export { axiosClient, axiosClientMusic, axiosAccountSpotify };

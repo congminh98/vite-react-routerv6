@@ -1,4 +1,4 @@
-import axiosClient from "@/api-client/axiosClient";
+import { axiosClient } from "@/api-client/axiosClient";
 
 export async function postTeams(data: FormData): Promise<any> {
   try {

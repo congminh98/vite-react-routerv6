@@ -1,4 +1,4 @@
-import axiosClient from "@/api-client/axiosClient";
+import { axiosClient } from "@/api-client/axiosClient";
 
 export const postGuestBook = async (data: any): Promise<any> => {
   try {

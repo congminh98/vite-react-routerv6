@@ -2,7 +2,7 @@ import { useGuestBook } from "@/api/guestBook";
 import { postGuestBook } from "@/api/guestBook/postGuestBook";
 import IMAGES from "@/constants/Images"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 
 type Props = {}
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
   congratulation: ''
 }
 
-export default function GuestBook({ }: Props) {
+const GuestBook = ({ }: Props) => {
   const [dataGuestbook, setDataGuestbook] = useState<any>(initialState);
   const queryClient = useQueryClient();
   const { data: guestBooks, isLoading: getLoading } = useQuery(useGuestBook());
@@ -38,7 +38,7 @@ export default function GuestBook({ }: Props) {
 
   return (
     <>
-      <section className="relative z-[1] h-screen md:h-auto py-20 bg-no-repeat bg-cover bg-center bg-anhcuoi after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:h-full after:w-full after:bg-[rgba(47,54,64,.4)] after:-z-[1]">
+      <section className="relative z-[1] md:h-auto py-20 bg-no-repeat bg-cover bg-center bg-anhcuoi after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:h-full after:w-full after:bg-[rgba(47,54,64,.4)] after:-z-[1]">
         <div className="container">
           <div className="grid mb-10 justify-items-center">
             <h2 className="mb-5 text-5xl text-colorPink font-playBall">Sổ Lưu Bút</h2>
@@ -110,3 +110,5 @@ export default function GuestBook({ }: Props) {
     </>
   )
 }
+
+export default memo(GuestBook);

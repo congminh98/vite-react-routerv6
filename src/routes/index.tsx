@@ -4,12 +4,13 @@ import { loader as appLoader } from "./app";
 import Team from "@/pages/Team";
 import { loader as teamLoader, action as teamAction } from "./team";
 import ErrorPage from "@/common/ErrorPage";
+import queryClient from "@/utils/commons";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: appLoader,
+    loader: appLoader(queryClient),
     errorElement: <ErrorPage />
   },
   {
