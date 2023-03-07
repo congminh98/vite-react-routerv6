@@ -12,7 +12,7 @@ const initialState = {
 }
 
 const GuestBook = ({ }: Props) => {
-  const [dataGuestbook, setDataGuestbook] = useState<any>(initialState);
+  const [dataGuestbook, setDataGuestbook] = useState<typeof initialState>(initialState);
   const queryClient = useQueryClient();
   const { data: guestBooks, isLoading: getLoading } = useQuery(useGuestBook());
 
@@ -36,6 +36,13 @@ const GuestBook = ({ }: Props) => {
     }
   }
 
+  const handleOnChange = (event: any) => {
+    setDataGuestbook({
+      ...dataGuestbook,
+      [event.target.name]: event.target.value || ''
+    })
+  }
+
   return (
     <>
       <section className="relative z-[1] md:h-auto py-20 bg-no-repeat bg-cover bg-center bg-anhcuoi after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:h-full after:w-full after:bg-[rgba(47,54,64,.4)] after:-z-[1]">
@@ -54,13 +61,13 @@ const GuestBook = ({ }: Props) => {
                     <input
                       className="flex-1 input-style"
                       type="text" value={dataGuestbook?.name}
-                      onChange={(event) => setDataGuestbook({ ...dataGuestbook, name: event.target.value || "" })}
+                      onChange={(event) => handleOnChange(event)}
                       name="name" required placeholder="Nhập họ tên*"
                     />
                     <input
                       className="flex-1 input-style"
                       type="email" value={dataGuestbook?.email}
-                      onChange={(event) => setDataGuestbook({ ...dataGuestbook, email: event.target.value || "" })}
+                      onChange={(event) => handleOnChange(event)}
                       name="email" placeholder="Nhập email"
                     />
                   </fieldset>
@@ -68,7 +75,7 @@ const GuestBook = ({ }: Props) => {
                     <textarea
                       className="w-full p-3 resize-none text-colorPink outline-0"
                       name="congratulation"
-                      value={dataGuestbook?.congratulation} onChange={(event) => setDataGuestbook({ ...dataGuestbook, congratulation: event.target.value || "" })}
+                      value={dataGuestbook?.congratulation} onChange={(event) => handleOnChange(event)}
                       rows={10} required placeholder="Nhập lời chúc của bạn*"
                     >
                     </textarea>

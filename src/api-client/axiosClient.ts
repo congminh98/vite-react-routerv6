@@ -34,11 +34,10 @@ axiosClient.interceptors.request.use(
 
 (axiosClientMusic || axiosAccountSpotify).interceptors.request.use(
   async (config) => {
-    const acceessToken = sessionStorage.getItem("access_token");
-    const access_token =
-      "BQAHq6mWyqEf7fa6pmCe9qsXIS60ONtNWRuDChUNsu4J5R3-nacYP5ec_yVEfVRggwptNLTp0yv2RlvjqGyAMHSC8KcpqkTFSXozNMT_y4gyrvIT34q1";
-    if (acceessToken) {
-      config.headers!.Authorization = `Bearer ${acceessToken}`;
+    const { cookie } = document;
+    const getAccessToken = cookie?.split(";")?.find(elem => elem.startsWith("access_token"))?.split("=")[1] as string;
+    if (getAccessToken) {
+      config.headers!.Authorization = `Bearer ${getAccessToken}`;
     }
 
     return config;

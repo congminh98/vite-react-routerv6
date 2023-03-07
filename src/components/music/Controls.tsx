@@ -40,8 +40,6 @@ const Controls = ({ }: Props) => {
       setProgress(progressTime);
     }
   }
-  const handleOnProgress = () => {
-  }
 
   const handleOnEnded = () => {
     !isRepeat && handlePreOrNext("next");
@@ -87,9 +85,6 @@ const Controls = ({ }: Props) => {
     }
   }
 
-  const handleOnPause = () => {
-  }
-
   React.useEffect(() => {
     if (audioStatus) {
       audioRef.current?.play();
@@ -104,18 +99,18 @@ const Controls = ({ }: Props) => {
     isRepeat ? setRepeatMusic(false) : setRepeatMusic(true);
   }
 
+  // api
   return (
     <>
       <audio
         loop={isRepeat}
         className="hidden"
         ref={audioRef}
-        src={currentTrack?.src}
+        src={currentTrack.src}
         onLoadedData={handleLoadedData}
         onTimeUpdate={onTimeUpdate}
-        onProgress={handleOnProgress}
         onEnded={handleOnEnded}
-        onPause={handleOnPause}
+        onPause={() => setAudioStatus(false)}
         onPlay={() => setAudioStatus(true)}
       />
 
@@ -126,7 +121,7 @@ const Controls = ({ }: Props) => {
         <FontAwesomeIcon className={styleIcons} icon={faBackward} onClick={() => handlePreOrNext("prev")} />
         <FontAwesomeIcon className={styleIcons} icon={faBackwardStep} onClick={() => handleStep("back")} />
         <span className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer bg-colorPink">
-          <FontAwesomeIcon className={`styleIcons text-white`} icon={audioStatus ? faPause : faPlay} onClick={handlePlayAudio} />
+          <FontAwesomeIcon className={`styleIcons text-white`} icon={!!audioStatus ? faPause : faPlay} onClick={handlePlayAudio} />
         </span>
         <FontAwesomeIcon className={styleIcons} icon={faForwardStep} onClick={() => handleStep("for")} />
         <FontAwesomeIcon className={styleIcons} icon={faForward} onClick={() => handlePreOrNext("next")} />

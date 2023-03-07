@@ -7,7 +7,6 @@ import 'aos/dist/aos.css';
 import router from "./routes"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AOS from 'aos';
-import { CookiesProvider } from "react-cookie";
 import queryClient from "@/utils/commons";
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
@@ -25,9 +24,7 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <Suspense fallback={<Loading />}>
-        <CookiesProvider>
-          <RouterProvider router={router} />
-        </CookiesProvider>
+        <RouterProvider router={router} />
       </Suspense>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

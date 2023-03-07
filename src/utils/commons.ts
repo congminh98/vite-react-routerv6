@@ -7,6 +7,7 @@ export const Configs = {
   TWILIO_AUTH_TOKEN: "5cbeec2d293311d4bd3a51fc6a3e56ba",
   SPOTIFY_CLIENT_ID: "5cde59ff59374f3c9e6ba77034d3b90a",
   SPOTIFY_CLIENT_SECRET: "b5091a99fa4e4c94880b1f53c2e6cd8a",
+  RAPIDAPI_SECRET: "9eafd080-b4c6-11ed-a747-75f698c336e5"
 };
 
 const queryClient = new QueryClient({
@@ -15,7 +16,7 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
       staleTime: 1000 * 10,
       retry: 5,
-      suspense: true
+      // suspense: true
     }
   }
 });

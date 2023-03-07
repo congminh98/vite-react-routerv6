@@ -5,12 +5,14 @@ import Team from "@/pages/Team";
 import { loader as teamLoader, action as teamAction } from "./team";
 import ErrorPage from "@/common/ErrorPage";
 import queryClient from "@/utils/commons";
+import Login from "@/pages/Login";
+import VideoCall from "@/pages/video-call";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: appLoader(queryClient),
+    // loader: appLoader(queryClient),
     errorElement: <ErrorPage />
   },
   {
@@ -19,13 +21,16 @@ const router = createBrowserRouter([
     // loader: teamLoader,
     // action: teamAction,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        // path: "team",
-        // element: ,
-        // loader: teamLoader,
-      },
-    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/video-call",
+    element: <VideoCall />,
+    errorElement: <ErrorPage />
   }
 ]);
 
